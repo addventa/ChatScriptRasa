@@ -8,7 +8,7 @@ You can look in the **training_data.json** to observe the rasa workout format as
 
 The server must run on this **IP: 127.0.0.1:5000**.
 
-Configuration is possible in BOTDATA/rasabot/**simplecontrol.top**.
+Configuration is possible in BOTDATA/**simplecontrol.top**.
 
 * [rasa NLU](http://rasa-nlu.readthedocs.io/en/stable/) - *rasa NLU installation & configuration.*
 
