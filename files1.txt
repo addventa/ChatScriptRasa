@@ -1,1 +1,1 @@
-../../BOTS/ChatScriptRasa/BOTDATA/rasabot/
+../../BOTS/ChatScriptRasa/BOTDATA/
