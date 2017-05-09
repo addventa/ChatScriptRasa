@@ -1,0 +1,29 @@
+topic: ~book_a_room repeat ["book a room"]
+
+u: ("number of rooms" _~number * "bed type" _~number *) ^keep()
+	$nbRooms = _0
+	$nbPeople = _1
+	Understood, so you want $nbRooms rooms with $nbPeople beds! \n
+	^gambit(~debut)
+	
+u: (<<"number of rooms" _~number>>) ^keep()
+	$value = %originalsentence
+	$nbRooms = _0
+	Good, i register your booking for $nbRooms room! \n
+	^gambit(~debut)
+
+u: (<<"bed type" _~number>>) ^keep()
+	$nbPeople = _0
+	Alright, so you want to book a room with a bed for $nbPeople people! \n
+	^gambit(~debut)
+
+u: ("room option") ^keep()
+	Ok, i register this room option. \n
+	^gambit(~debut)
+
+u: ROOMS ("book a room") ^keep()
+	So, you want to book, how many rooms do you want? \n
+	a: (_~number)
+		$nbRooms = _0
+		Good, i register your booking for $nbRooms room! \n
+		^gambit(~debut)

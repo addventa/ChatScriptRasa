@@ -1,0 +1,70 @@
+outputmacro: rasabot()
+	$cs_token = #DO_INTERJECTION_SPLITTING | #DO_SUBSTITUTE_SYSTEM | #DO_NUMBER_MERGE | #DO_DATE_MERGE | #DO_PROPERNAME_MERGE | #DO_SPELLCHECK | #DO_PARSE
+	$cs_control_main = ~control
+	$userprompt = ^"%user: >"
+	$botprompt = ^"rasabot: "
+
+table: defaultbot (^name)
+	^createfact(^name defaultbot defaultbot)
+	DATA:
+	rasabot
+
+outputmacro: ^fromoobtomain()
+	^next(INPUT)
+	^reuse(MAIN)
+
+outputmacro: ^rasaCall(^sentence) 
+	$$url = ^"http://127.0.0.1:5000/parse"
+	$params = ^'{"q":"^sentence"}'
+	$dataJson = ^jsonopen(POST $$url $params "")
+	$inputEntities = $dataJson.intent.name
+	$confidence = $dataJson.intent.confidence
+	if ($confidence <= 0.4 and $confidence > 0.0) {
+		^reuse(~debut.WHAT)
+		^fail(RULE)
+	}
+	$_i = 0
+	^loop() {
+		$_entityName = $dataJson.entities[$_i].entity
+		$_entityValue = $dataJson.entities[$_i].value
+		if ($_entityValue == null ) {
+			^end(loop)
+		}
+		$inputEntities = ^join($inputEntities ^' ' $_entityName ^' ' $_entityValue)
+		$_i += 1
+	}
+	^input( $inputEntities )
+	^fail(SENTENCE)
+
+topic: ~control system ()
+u: MAIN ()
+	if (%response == 0)
+	{
+		@8 = ^keywordtopics()
+		loop()
+		{
+			$$topic = first(@8subject)
+			nofail(TOPIC ^respond($$topic))
+			if (%response != 0)
+			{
+				^end(RULE)
+			}
+		}
+	}
+	if (!%topic) {
+		^gambit(~debut)
+		^rasaCall(%originalsentence)
+		^end(RULE)
+	}
+	$_nbResponseBefore = %response
+	$_nbResponseTransverse = %response - $_nbResponseBefore
+	if ($_nbResponseTransverse == 0) {
+		nofail(TOPIC ^rejoinder())
+		if (%response == $_nbResponseTransverse) { nofail(TOPIC ^respond(%topic)) }
+		if (%response == $_nbResponseTransverse)
+		{
+			^rasaCall(%originalsentence)
+		}
+	} else {
+		nofail(TOPIC ^gambit(%topic))
+	}

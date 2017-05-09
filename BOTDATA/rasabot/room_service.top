@@ -1,0 +1,13 @@
+topic: ~room_service repeat ["room service"]
+
+u: (food) ^keep()
+	No problem, we will send you all the food you need, with pleasure! \n
+	^gambit(~debut)
+
+u: (cleaning) ^keep()
+	A cleaning service is done every morning at 11 A.M., just wait for it. \n
+	^gambit(~debut)
+
+u: ("room service") ^keep()
+	Yes, we can do that for you, just wait a moment please. \n
+	^gambit(~debut)

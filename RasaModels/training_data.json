@@ -1,0 +1,487 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "I want to book a room", 
+        "intent": "book_a_room", 
+        "entities": []
+      }, 
+      {
+        "text": "I want to have a room", 
+        "intent": "book_a_room", 
+        "entities": []
+      }, 
+      {
+        "text": "Is a room available from xxx to yyy?", 
+        "intent": "book_a_room", 
+        "entities": [
+          {
+            "start": 25, 
+            "end": 28, 
+            "value": "xxx", 
+            "entity": "time"
+          }, 
+          {
+            "start": 32, 
+            "end": 35, 
+            "value": "yyy", 
+            "entity": "time"
+          }
+        ]
+      }, 
+      {
+        "text": "i need a room for 2 persons", 
+        "intent": "book_a_room", 
+        "entities": [
+          {
+            "start": 18, 
+            "end": 27, 
+            "value": "2 persons", 
+            "entity": "bed_type"
+          }
+        ]
+      }, 
+      {
+        "text": "i need a room with a private bathroom", 
+        "intent": "book_a_room", 
+        "entities": [
+          {
+            "start": 21, 
+            "end": 37, 
+            "value": "private bathroom", 
+            "entity": "room_option"
+          }
+        ]
+      }, 
+      {
+        "text": "i want a cheap room", 
+        "intent": "book_a_room", 
+        "entities": [
+          {
+            "start": 9, 
+            "end": 14, 
+            "value": "cheap", 
+            "entity": "price"
+          }
+        ]
+      }, 
+      {
+        "text": "I want to cancel a booking", 
+        "intent": "book_a_room", 
+        "entities": []
+      }, 
+      {
+        "text": "I want a 2 room with 2 beds", 
+        "intent": "book_a_room", 
+        "entities": [
+          {
+            "start": 21, 
+            "end": 27, 
+            "value": "2 beds", 
+            "entity": "bed_type"
+          }, 
+          {
+            "start": 9, 
+            "end": 15, 
+            "value": "2 room", 
+            "entity": "number_of_rooms"
+          }
+        ]
+      }, 
+      {
+        "text": "I want a smoking room", 
+        "intent": "book_a_room", 
+        "entities": [
+          {
+            "start": 9, 
+            "end": 21, 
+            "value": "smoking room", 
+            "entity": "room_option"
+          }
+        ]
+      }, 
+      {
+        "text": "Do you have rooms available?", 
+        "intent": "book_a_room", 
+        "entities": []
+      }, 
+      {
+        "text": "How can I connect to WIFI ?", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 10, 
+            "end": 17, 
+            "value": "connect", 
+            "entity": "wifi_connection"
+          }
+        ]
+      }, 
+      {
+        "text": "What are the wifi credentials", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 18, 
+            "end": 29, 
+            "value": "credentials", 
+            "entity": "password"
+          }
+        ]
+      }, 
+      {
+        "text": "I need the passswords for the Wifi", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 11, 
+            "end": 21, 
+            "value": "passswords", 
+            "entity": "password"
+          }
+        ]
+      }, 
+      {
+        "text": "Do you have wifi in the rooms?", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "how to activate the wifi", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 7, 
+            "end": 15, 
+            "value": "activate", 
+            "entity": "wifi_connection"
+          }
+        ]
+      }, 
+      {
+        "text": "i want the wifi", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "wifi doesn't work", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "what's the password for the internet", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 11, 
+            "end": 19, 
+            "value": "password", 
+            "entity": "password"
+          }
+        ]
+      }, 
+      {
+        "text": "i need internet", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "The wifi is slow can you help me?", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "I cannot connect to the wifi", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "Do I need to pay for the wifi", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 13, 
+            "end": 16, 
+            "value": "pay", 
+            "entity": "price"
+          }
+        ]
+      }, 
+      {
+        "text": "Is there free wifi", 
+        "intent": "wifi", 
+        "entities": [
+          {
+            "start": 9, 
+            "end": 13, 
+            "value": "free", 
+            "entity": "price"
+          }
+        ]
+      }, 
+      {
+        "text": "How do I get to the wifi", 
+        "intent": "wifi", 
+        "entities": []
+      }, 
+      {
+        "text": "Can you send someone in my room ?", 
+        "intent": "room_service", 
+        "entities": []
+      }, 
+      {
+        "text": "How can I reach room service ?", 
+        "intent": "room_service", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to eat something", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 10, 
+            "end": 13, 
+            "value": "eat", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "i am hungry", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 5, 
+            "end": 11, 
+            "value": "hungry", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "room service please", 
+        "intent": "room_service", 
+        "entities": []
+      }, 
+      {
+        "text": "i want some champagne", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 12, 
+            "end": 21, 
+            "value": "champagne", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "wine please", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 0, 
+            "end": 4, 
+            "value": "wine", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "sandwich please", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 0, 
+            "end": 8, 
+            "value": "sandwich", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "breakfast", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 0, 
+            "end": 9, 
+            "value": "breakfast", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "clean the room", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 0, 
+            "end": 5, 
+            "value": "clean", 
+            "entity": "cleaning"
+          }
+        ]
+      }, 
+      {
+        "text": "I would like to complain about the room service / cleaning", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 16, 
+            "end": 24, 
+            "value": "complain", 
+            "entity": "complain"
+          }
+        ]
+      }, 
+      {
+        "text": "Can someone pickup my laundry", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 22, 
+            "end": 29, 
+            "value": "laundry", 
+            "entity": "cleaning"
+          }
+        ]
+      }, 
+      {
+        "text": "What time does roomservice starts/ends", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 5, 
+            "end": 9, 
+            "value": "time", 
+            "entity": "time"
+          }
+        ]
+      }, 
+      {
+        "text": "What is the menu for room services", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 12, 
+            "end": 16, 
+            "value": "menu", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "Can I have breakfast in bed?", 
+        "intent": "room_service", 
+        "entities": [
+          {
+            "start": 11, 
+            "end": 20, 
+            "value": "breakfast", 
+            "entity": "food"
+          }
+        ]
+      }, 
+      {
+        "text": "Can you give me a bill copy ?", 
+        "intent": "get_a_bill_copy", 
+        "entities": []
+      }, 
+      {
+        "text": "I want a bill copy, please", 
+        "intent": "get_a_bill_copy", 
+        "entities": []
+      }, 
+      {
+        "text": "Could you print another copy of the bill ?", 
+        "intent": "get_a_bill_copy", 
+        "entities": []
+      }, 
+      {
+        "text": "Could you fax a copy of the bill ?", 
+        "intent": "get_a_bill_copy", 
+        "entities": [
+          {
+            "start": 10, 
+            "end": 13, 
+            "value": "fax", 
+            "entity": "send"
+          }
+        ]
+      }, 
+      {
+        "text": "Can you mail me a copy of the bill ?", 
+        "intent": "get_a_bill_copy", 
+        "entities": [
+          {
+            "start": 8, 
+            "end": 12, 
+            "value": "mail", 
+            "entity": "send"
+          }
+        ]
+      }, 
+      {
+        "text": "I would like to get my bill via email", 
+        "intent": "get_a_bill_copy", 
+        "entities": [
+          {
+            "start": 32, 
+            "end": 38, 
+            "value": "email", 
+            "entity": "send"
+          }
+        ]
+      }, 
+      {
+        "text": "I have lost my bill please resend me a copy", 
+        "intent": "get_a_bill_copy", 
+        "entities": [
+          {
+            "start": 27, 
+            "end": 33, 
+            "value": "resend", 
+            "entity": "send"
+          }
+        ]
+      }, 
+      {
+        "text": "I have not received my hotel bill can I still receive this?", 
+        "intent": "get_a_bill_copy", 
+        "entities": []
+      }, 
+      {
+        "text": "The Bill is incorrect can I get a new one", 
+        "intent": "get_a_bill_copy", 
+        "entities": []
+      }, 
+      {
+        "text": "Is the bill VAT included", 
+        "intent": "get_a_bill_copy", 
+        "entities": [
+          {
+            "start": 12, 
+            "end": 15, 
+            "value": "VAT", 
+            "entity": "price"
+          }
+        ]
+      }, 
+      {
+        "text": "When will the Bill be ready", 
+        "intent": "get_a_bill_copy", 
+        "entities": [
+          {
+            "start": 0, 
+            "end": 4, 
+            "value": "When", 
+            "entity": "time"
+          }
+        ]
+      }
+    ], 
+    "entity_examples": [], 
+    "intent_examples": []
+  }
+}

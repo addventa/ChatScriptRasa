@@ -1,0 +1,13 @@
+topic: ~wifi repeat ["wifi"]
+
+u: CREDITENTIALS (password) ^keep()
+	To connect to the wifi, you have to select the INDIA-X60-HOTEL, and the password is : welcomeinindia. \n
+	^gambit(~debut)
+
+u: WIFI ("wifi") ^keep()
+	We have the wifi for free in the hotel, do you want the credentials? \n
+	a: (~yes)
+		^reuse(CREDITENTIALS)
+	a: (~no)
+		No problem! \n
+		^gambit(~debut)
