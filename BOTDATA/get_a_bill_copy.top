@@ -4,6 +4,6 @@ u: (send) ^keep()
 	Yes, we can send you your bill copy the way you desire. \n
 	^gambit(~debut)
 
-u: ("get a bill copy") ^keep()
+u: (get a bill copy) ^keep()
 	Sure, we will give you a bill copy right now. \n
 	^gambit(~debut)

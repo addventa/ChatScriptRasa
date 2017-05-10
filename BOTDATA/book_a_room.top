@@ -1,6 +1,6 @@
 topic: ~book_a_room repeat ["book a room"]
 
-u: ("number of rooms" _~number * "bed type" _~number *) ^keep()
+u: (number of rooms _~number * bed type _~number *) ^keep()
 	$nbRooms = _0
 	$nbPeople = _1
 	Understood, so you want $nbRooms rooms with $nbPeople beds! \n
@@ -17,11 +17,11 @@ u: (<<"bed type" _~number>>) ^keep()
 	Alright, so you want to book a room with a bed for $nbPeople people! \n
 	^gambit(~debut)
 
-u: ("room option") ^keep()
+u: (room option) ^keep()
 	Ok, i register this room option. \n
 	^gambit(~debut)
 
-u: ROOMS ("book a room") ^keep()
+u: ROOMS (book a room) ^keep()
 	So, you want to book, how many rooms do you want? \n
 	a: (_~number)
 		$nbRooms = _0

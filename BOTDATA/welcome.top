@@ -4,12 +4,11 @@ concept: ~no[no nope nono nah]
 topic: ~debut repeat [start]
 
 t: ()
-	\n
 	Hi i'am Cecilia, how can i help you? \n
 
 t: () ^keep()
 	Do you have another question? \n
 
-u: WHAT ("Don't understand") ^keep()
+u: WHAT (~emomisunderstand) ^keep()
 	Sorry, i did not understand, try with another sentence please. \n
 	^gambit(~)
