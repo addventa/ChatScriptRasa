@@ -4,14 +4,15 @@
 
 First, you need to have a rasa server running with our model: **RasaModels**.
 
+Follow the rasa NLU tutorial to deploy your rasa server.
+
+* [rasa NLU](http://rasa-nlu.readthedocs.io/en/stable/) - *rasa NLU installation & configuration.*
+
 You can look in the **training_data.json** to observe the rasa workout format as well as the sentences that the bot will be able to understand.
 
 The server must run on this **IP: 127.0.0.1:5000**.
 
 Configuration is possible in BOTDATA/**simplecontrol.top**.
-
-* [rasa NLU](http://rasa-nlu.readthedocs.io/en/stable/) - *rasa NLU installation & configuration.*
-
 
 ## How does it works ?
 
